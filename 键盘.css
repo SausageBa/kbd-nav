@@ -6,38 +6,74 @@
 a {
     text-decoration: none;
 }
-
-kbd {
-    border: 1px solid red;
-    border-collapse: collapse;
-    display: inline-block;
-    width: 4em;
-    height: 4em;
-	text-transform: uppercase;
-	position:relative;
+.key{
+    width:50px;
+    height:40px;
+    display:inline-flex;
+    background: linear-gradient(to bottom, #292929 0%,#111111 100%);
+    margin:0px 5px;
+    box-shadow: 0 0 0 1px #1A1B1C,0 0 0 2px #1F2020,0 3px 0 2px #000000;  
+    border-radius:6px;
+    text-transform: uppercase;
+    border: 1px solid #373737;
+    position:relative;
+    font-size:20px;
 }
-
-kbd>button {
+.key > span{
+    color: #ffffff;
+    font-size: 16px;
+    position:absolute;
+    top:2px;
+    left: 4px; 
+}
+.key > button {
 	position:absolute;
 	right:0;
 	bottom:0;
-	display:none;
+    display:none;
+    background-color: transparent;
+    color:#ffffff;
+    border:0px;
+    font-size:10px;
 }
-kbd:hover > button{
-	display:inline-block;
+.key:hover > button{
+    display:inline-block;
 }
 div:nth-child(2) {
-    margin-left: 1em;
+    margin-left: -20px;
 }
 
 div:nth-child(3) {
-    margin-left: 2em;
+    margin-left: -60px;
 }
 
 main>.wrapper {
     display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border-radius:10px;
 }
 
 main {
     text-align: center;
+    display:flex;/*变成弹性盒*/
+    align-items:center;/*垂直居中*/
+    justify-content:center;/*左右居中*/
+    height:100vh;/*vh=viewport height(视口、屏幕高度)*/    
+}
+.row{
+    margin:10px;
+}
+body{
+    background: grey url(./wall.jpg) no-repeat center center;
+    background-size: cover;
+}
+.mask{
+    background: rgba(0,0,0,0.3);
+}
+.icon {
+    height:16px;
+    width:16px;
+    position: absolute;
+    top:4px;
+    right:2px;
 }
